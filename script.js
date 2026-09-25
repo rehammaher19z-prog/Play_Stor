@@ -279,7 +279,7 @@ loginForm.addEventListener('submit', (e) => {
 // --------------------------------------------------
 
 
-fetch('Ecommerce website/products.json')
+fetch('Ecommerce Website/products.json')
 
     .then(res => res.json())
 
