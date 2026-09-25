@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<!-- بيحدد إن الصفحة بتستخدم HTML5 -->
+
+<html lang="en">
+<!-- بداية صفحة HTML واللغة الأساسية إنجليزي -->
+
+<head>
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css">
+
+    <!-- ترميز الصفحة علشان يدعم كل اللغات ومنها العربي -->
+    <meta charset="UTF-8">
+
+    <!-- بيخلي الصفحة Responsive على الموبايل والأجهزة المختلفة -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- أيقونة الموقع اللي بتظهر جنب اسم الموقع في التبويب -->
+    <link rel="icon" href="Ecommerce Website/img/icon.png">
+
+    <!-- ربط ملف الـ CSS الخاص بتنسيق الموقع -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- اسم الموقع اللي هيظهر في التبويب -->
+    <title>Online_Store</title>
+
+    <!-- مكتبة Font Awesome علشان نستخدم الأيقونات -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+
+
+
+<body>
+
+<div class="cart">
+    <div class="top_cart">
+        <h3>Cart Items : (<span class="count_item_cart">0</span>)</h3>
+        <span class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+    </div>
+
+
+    <div class="items_in_cart" id="cart_items">
+        
+
+    
+        <!-- <div class="item_cart">
+        
+           
+            <div class="img_cart">
+                <img src="Ecommerce Website/img/product/10.png" alt="">
+            </div>
+        
+        
+            <div class="content">
+                <h4>Lorem ipsum dolor sit 10lorem10jfeqhwehed.</h4>
+                <p class="price_cart">80$</p>
+        
+                <div class="Quntity_controle">
+                    <button class="decrease_quntity">-</button>
+                    <span class="quntity">3</span>
+                    <button class="increese_quntity">+</button>
+                </div>
+            </div>
+        
+      
+            <div class="delete_cart">
+                <button class="delete_item">
+                    <i class="fa-solid fa-trash-can"></i>
+                </button>
+            </div>
+        
+        </div> -->
+
+
+    </div>
+
+
+
+<div class="bottom_cart">
+    <div class="total">
+        <p>SubTotal</p>
+        <p>------></p>
+        <p class="price_cart_total">0$</p>
+
+    </div>
+
+
+    <div class="button_cart">
+        <a href="checkout.html" class="btn_cart">Checkout</a>
+
+        <span class="btn_cart trans_bg">Shop more</span>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- Favorite Popup -->
+
+<div class="favorite">
+
+    <div class="top_favorite">
+
+        <h3>
+            My Favorite : (<span class="count_item_fav">0</span>)
+        </h3>
+
+        <span class="close_favorite">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </span>
+
+    </div>
+
+    <div id="favorite_items">
+    </div>
+
+</div>
+
+
+
+
+
+    <!-- بداية الهيدر (الجزء العلوي من الموقع) -->
+    <header>
+
+        <!-- الجزء العلوي بالكامل من الهيدر -->
+        <div class="top_header">
+
+            <!-- Container علشان يخلي المحتوى في منتصف الصفحة ومنظم -->
+            <div class="container">
+
+                <!-- Div بيجمع اللوجو واسم الموقع مع بعض -->
+                <div id="rere">
+
+                    <!-- اللوجو ولو اتضغط عليه يرجع للصفحة الرئيسية -->
+                    <a href="#" class="logo">
+                        <img src="Ecommerce Website/img/icon.png">
+                    </a>
+
+                    <!-- اسم الموقع والوصف -->
+                    <div class="icon1">
+                        <h1>Reham</h1>
+                        <h3>Online Shop</h3>
+                    </div>
+
+                </div>
+
+
+
+
+                <!-- نموذج البحث -->
+                <form class="search_box">
+
+                    <!-- مكان اختيار نوع المنتجات -->
+                    <div class="select_box">
+
+                        <!-- قائمة منسدلة لاختيار القسم -->
+                        <select id="category" name="category">
+
+                            <option value="All categories">All categories</option>
+                            <option value="Electronics & Digita">Electronics & Digita</option>
+                            <option value="Phone & Tablet">Phone & Tablet</option>
+                            <option value="Fashion & Clothings">Fashion & Clothings</option>
+                            <option value="Talivsion & Monitor">Talivsion & Monitor</option>
+                            <option value="Jewelry & Watches">Jewelry & Watches</option>
+                            <option value="Washing Machine">Washing Machine</option>
+                            <option value="Toys & Hobbies">Toys & Hobbies</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- مكان كتابة اسم المنتج -->
+                    <input type="search" name="search" id="search" placeholder="Search for products" required>
+
+                    <!-- زر البحث -->
+                    <button type="submit">
+
+                        <!-- أيقونة العدسة -->
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+                </form>
+
+
+
+
+
+
+
+                <!-- أيقونة المنتجات المفضلة -->
+                <div class="header-icons">
+
+                    <div class="icon">
+                    
+                    <a href="#">
+                    
+                        <!-- أيقونة القلب -->
+                        <i class="fa-regular fa-heart"></i>
+                    
+                        <!-- عدد المنتجات الموجودة في المفضلة -->
+                        <span class="count count_favourite">0</span>
+                    
+                    </a>
+                    </div>
+
+                    <!-- أيقونة سلة المشتريات -->
+                    <div class="icon">
+                    
+                        <a href="#">
+                    
+                            <!-- أيقونة الكارت -->
+                            <i class="fa-solid fa-cart-shopping"></i>
+                    
+                            <!-- عدد المنتجات الموجودة في السلة -->
+                            <span class="count count_item_header"> 0 </span>
+                    
+                        </a>
+                    
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+<div class="bottom_header">
+    <div class="container">
+        <nav class="nav">
+
+<div class="category_nav">
+
+<div class="category_btn">
+<i class="fa-solid fa-bars"></i>
+    <P>Browse Category</P>
+<i  class="fa-solid fa-angle-down"></i>
+</div>
+
+<div class="category_nav_list">
+   <a href="#">Top 10 offers</a>
+   <a href="#">Electronics & digits</a>
+   <a href="#">Phons & Tables</a>
+   <a href="#">Fashion & Clothings</a>
+   <a href="#">Talivsion & Monitor</a>
+   <a href="#">Jewelry & Watches</a>
+   <a href="#">Toys & Hobbies</a>
+</div>
+
+</div>
+
+<ul class="nav_links">
+<li class="active"><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#"> Accesorise</a></li>
+<li><a href="#"> Blog</a></li>
+<li><a href="#"> Contact</a></li>
+
+</ul>
+        </nav>
+
+
+
+
+        <div class="login_signup btns">
+<a class="btn"  id="Log-in" href="#">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+<a class="btn" id="Sign-up" href="#">Sign up<i class="fa-solid fa-user-plus"></i></a>
+        </div>
+
+
+
+        <div class="mobile_menu">
+        
+            <button class="mobile_menu_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        
+            <ul class="mobile_nav_links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Accesorise</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    </header>
+
+
+
+
+<div class="slider">
+    <div class="container">
+
+        <!-- Swiper -->
+        <div class="slide-swap mySwiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <a href="#"> <img src="Ecommerce Website/img/banner_home1.png" alt=""> </a>
+                </div>
+
+
+
+                <div class="swiper-slide">
+                    <a href="#"> <img src="Ecommerce Website/img/banner_home2.png" alt=""> </a>
+                </div>
+
+
+
+
+
+            </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+        
+
+        </div>
+
+
+        <div class="banner_2">
+            <a href="#">
+                <img src="Ecommerce Website/img/banner_home3.png" alt="">
+            </a>
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+<div class="banner_4">
+    <div class="container">
+                <div class="box">
+                    <a href="" class="link_btn"> </a>
+                    <img src="Ecommerce Website/img/banner3_1.png" alt="">
+                    <div class="text">
+                        <h5>Breack Disc</h5>
+                        <h5>deals on this</h5>
+                        <div class="sale">
+                            <p>Up To</p>
+                            <span>70%</span>
+                        </div>
+                        <h5>Shop Now</h5>
+                    </div>
+                </div>
+
+                        <div class="box">
+                            <a href="" class="link_btn"> </a>
+                            <img src="Ecommerce Website/img/banner3_2.png" alt="">
+                            <div class="text">
+                                <h5>Breack Disc</h5>
+                                <h5>deals on this</h5>
+                                <div class="sale">
+                                    <p>Up To</p>
+                                    <span>80%</span>
+                                </div>
+                                <h5>Shop Now</h5>
+                            </div>
+                        </div>
+
+                                <div class="box">
+                                    <a href="" class="link_btn"> </a>
+                                    <img src="Ecommerce Website/img/banner3_3.png" alt="">
+                                    <div class="text">
+                                        <h5>Breack Disc</h5>
+                                        <h5>deals on this</h5>
+                                        <div class="sale">
+                                            <p>Up To</p>
+                                            <span>50%</span>
+                                        </div>
+                                        <h5>Shop Now</h5>
+                                    </div>
+                                </div>
+
+
+
+                                    <div class="box">
+                                                    <a href="" class="link_btn"> </a>
+                                                    <img src="Ecommerce Website/img/banner3_4.png" alt="">
+                                                    <div class="text">
+                                                        <h5>Breack Disc</h5>
+                                                        <h5>deals on this</h5>
+                                                        <div class="sale">
+                                                            <p>Up To</p>
+                                                            <span>20%</span>
+                                                        </div>
+                                                        <h5>Shop Now</h5>
+                                                    </div>
+                                    </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="slider_products slide">
+
+    <div class="container">
+
+        <div class="slide_product mySwiper">
+
+            <div class="top_slid">
+                <h2><i class="fa-solid fa-tags"></i>Hot Deals</h2>
+            </div>
+
+            <div class="products swiper-wrapper" id="swiper_items_sale">
+
+
+                <!-- Product 1 -->
+
+
+            </div>
+
+
+
+            <div class="swiper-button-next btn_swip"></div>
+            <div class="swiper-button-prev btn_swip"></div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+<div class="banners">
+    <div class="container">
+        <div class="banners_boxs banner_2_img">
+            <a href="" class="box">
+<img src="Ecommerce Website/img/banner_box4.jpg" alt="">
+<img src="Ecommerce Website/img/banner_box5.jpg" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="slider_products slide">
+
+    <div class="container">
+
+        <div class="slide_product mySwiper">
+
+            <div class="top_slid">
+                <h2><i class="fa-solid fa-tags"></i>Electronics</h2>
+            </div>
+
+            <div class="products swiper-wrapper" id="swiper_items">
+
+
+                <!-- Product 1 -->
+
+
+            </div>
+
+
+
+            <div class="swiper-button-next btn_swip"></div>
+            <div class="swiper-button-prev btn_swip"></div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+<div class="slider_products slide">
+
+    <div class="container">
+
+        <div class="slide_product mySwiper">
+
+            <div class="top_slid">
+                <h2><i class="fa-solid fa-tags"></i>Mobiles</h2>
+            </div>
+
+            <div class="products swiper-wrapper" id="swiper_mobiles">
+
+
+                <!-- Product 1 -->
+
+
+            </div>
+
+
+
+            <div class="swiper-button-next btn_swip"></div>
+            <div class="swiper-button-prev btn_swip"></div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+<div class="banners">
+    <div class="container">
+        <div class="banners_boxs banner_3_img">
+            <a href="" class="box">
+                <img src="Ecommerce Website/img/banner_box1.jpg" alt="">
+                <img src="Ecommerce Website/img/banner_box2.jpg" alt="">
+                <img src="Ecommerce Website/img/banner_box3.jpg" alt="">
+
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="slider_products slide">
+
+    <div class="container">
+
+        <div class="slide_product mySwiper">
+
+            <div class="top_slid">
+                <h2><i class="fa-solid fa-tags"></i>appliance</h2>
+            </div>
+
+            <div class="products swiper-wrapper" id="swiper_appliance">
+
+
+                <!-- Product 1 -->
+
+
+            </div>
+
+
+
+            <div class="swiper-button-next btn_swip"></div>
+            <div class="swiper-button-prev btn_swip"></div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+<footer class="section-p1">
+    <div class="col">
+        <div id="rere">
+        
+            <!-- اللوجو ولو اتضغط عليه يرجع للصفحة الرئيسية -->
+            <a href="#" class="logo">
+                <img src="Ecommerce Website/img/icon.png">
+            </a>
+        
+            <!-- اسم الموقع والوصف -->
+            <div class="icon1 icon2">
+                <h1>Reham</h1>
+                <h3>Online Shop</h3>
+            </div>
+        
+        </div>
+
+                    
+        <h4>Contact</h4>
+        <p>
+            <storng>Adress: </storng>562 Wellington Road, street 32 ,San Francisco
+        </p>
+        <p>
+            <storng>Phone: </storng>=10 2222 365 /(+91) 01 2345 6789
+        </p>
+        <p>
+            <storng>Hours: </storng>10:00 - 18:00, Mon - sat
+        </p>
+        <div class="follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Plocicy</a>
+        <a href="#">Terms & Conditons</a>
+        <a href="#">Contact US</a>
+
+
+    </div>
+
+    <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign Up</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+
+
+    </div>
+
+    <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google</p>
+        <div class="row">
+            <img src="Ecommerce Website/img/pay/app.jpg" alt="">
+            <img src="Ecommerce Website/img/pay/play.jpg" alt="">
+        </div>
+        <p>secutrd Payment Gateways</p>
+        <img src="Ecommerce Website/img/pay/pay.jpg" alt="">
+    </div>
+
+
+    <div class="copyright">
+        <p>© 2026 Tech2 — HTML, CSS & JavaScript E-commerce Template</p>
+    </div>
+</footer>
+
+
+
+
+
+<div class="Sign_up" id="form-details">
+
+    <span class="closeSign">
+        <i class="fa-regular fa-circle-xmark"></i>
+    </span>
+
+    <form id="signUpForm">
+
+        <h2>
+            Sign Up
+            <i style="color:white" class="fa-solid fa-user-plus"></i>
+        </h2>
+
+        <input type="text" id="signupName" placeholder="Enter your name">
+
+        <input type="email" id="signupEmail" placeholder="Enter your email">
+
+        <input type="password" id="signupPassword" placeholder="Enter your password">
+
+        <input type="password" id="confirmPassword" placeholder="Confirm your password">
+
+        <button type="submit">
+            Sign Up
+        </button>
+
+        <p id="signupMessage"></p>
+
+    </form>
+
+</div>
+
+
+
+
+
+<div class="Log_in" id="login-details">
+
+    <span class="closeLogin">
+        <i class="fa-regular fa-circle-xmark"></i>
+    </span>
+
+    <form id="loginForm">
+
+        <div class="login-icon">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </div>
+
+        <h2>Welcome Back</h2>
+
+        <p class="login-subtitle">
+            Login to your account
+        </p>
+
+        <input type="email" id="loginEmail" placeholder="Enter your email">
+
+        <input type="password" id="loginPassword" placeholder="Enter your password">
+
+        <button type="submit">
+            Log In
+        </button>
+
+        <p id="loginMessage"></p>
+
+    </form>
+
+</div>
+
+
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- ربط ملف JavaScript -->
+    <script src="items_home.js"></script>
+    <script src="swiiper.js"></script>
+    <script src="script.js"></script>
+   
+   
+
+</body>
+
+</html>

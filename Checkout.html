@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="StyleCheckout.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+
+
+<!-- بداية الهيدر (الجزء العلوي من الموقع) -->
+<header>
+
+    <!-- الجزء العلوي بالكامل من الهيدر -->
+  
+
+    <div style="height: 100px;" class="bottom_header">
+        <div  class="container">
+            <nav style="margin-top: 30px;" class="nav">
+
+                <div class="category_nav">
+
+                    <div class="category_btn">
+                        <i class="fa-solid fa-bars"></i>
+                        <P>Browse Category</P>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <div class="category_nav_list">
+                        <a href="#">Top 10 offers</a>
+                        <a href="#">Electronics & digits</a>
+                        <a href="#">Phons & Tables</a>
+                        <a href="#">Fashion & Clothings</a>
+                        <a href="#">Talivsion & Monitor</a>
+                        <a href="#">Jewelry & Watches</a>
+                        <a href="#">Toys & Hobbies</a>
+                    </div>
+
+                </div>
+
+                <ul class="nav_links">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#"> Accesorise</a></li>
+                    <li><a href="#"> Blog</a></li>
+                    <li><a href="#"> Contact</a></li>
+
+                </ul>
+            </nav>
+
+
+
+
+            <div class="login_signup btns" style="margin-top: 30px;">
+                <a class="btn" id="Log-in" href="#">Login <i class="fa-solid fa-right-to-bracket"></i></a>
+                <a class="btn" id="Sign-up" href="#">Sign up<i class="fa-solid fa-user-plus"></i></a>
+            </div>
+
+
+
+            <div class="mobile_menu">
+
+                <button class="mobile_menu_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul class="mobile_nav_links">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Accesorise</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</header>
+
+
+
+    <!-- =========================
+         Checkout Page
+    ========================== -->
+
+    <main class="checkout">
+
+        <div class="checkout_container">
+
+            <!-- =========================
+                 Customer Information
+            ========================== -->
+
+            <section class="checkout_form">
+
+                <h2>
+                    <i class="fa-solid fa-user"></i>
+                    Customer Information
+                </h2>
+
+                <form id="checkoutForm">
+
+                    <div class="input_group">
+
+                        <label for="fullName">Full Name</label>
+
+                        <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+                    </div>
+
+
+                    <div class="input_group">
+
+                        <label for="email">Email</label>
+
+                        <input type="email" id="email" placeholder="Enter your email" required>
+
+                    </div>
+
+
+                    <div class="input_group">
+
+                        <label for="phone">Phone Number</label>
+
+                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+                    </div>
+
+
+                    <!-- =========================
+                         Shipping Address
+                    ========================== -->
+
+                    <h2>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Shipping Address
+                    </h2>
+
+
+                    <div class="input_group">
+
+                        <label for="address">Address</label>
+
+                        <input type="text" id="address" placeholder="Enter your address" required>
+
+                    </div>
+
+
+                    <div class="address_row">
+
+                        <div class="input_group">
+
+                            <label for="city">City</label>
+
+                            <input type="text" id="city" placeholder="City" required>
+
+                        </div>
+
+
+                        <div class="input_group">
+
+                            <label for="country">Country</label>
+
+                            <input type="text" id="country" placeholder="Country" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================
+                         Payment Method
+                    ========================== -->
+
+                    <h2>
+                        <i class="fa-solid fa-credit-card"></i>
+                        Payment Method
+                    </h2>
+
+
+                    <div class="payment_methods">
+
+                        <label class="payment_option">
+
+                            <input type="radio" name="payment" value="cash" checked>
+
+                            <span>
+                                <i class="fa-solid fa-money-bill"></i>
+                                Cash on Delivery
+                            </span>
+
+                        </label>
+
+
+                        <label class="payment_option">
+
+                            <input type="radio" name="payment" value="card">
+
+                            <span>
+                                <i class="fa-solid fa-credit-card"></i>
+                                Credit / Debit Card
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <button type="submit" class="place_order">
+                        Place Order
+                        <i class="fa-solid fa-check"></i>
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- =========================
+                 Order Summary
+            ========================== -->
+
+            <aside class="order_summary">
+
+                <h2>Order Summary</h2>
+
+
+                <!-- Products will be added here using JavaScript -->
+                <div id="checkout_items">
+
+                </div>
+
+
+                <div class="summary_total">
+
+                    <div>
+                        <span>Subtotal</span>
+                        <span id="checkout_subtotal">0$</span>
+                    </div>
+
+                    <div>
+                        <span>Shipping</span>
+                        <span id="checkout_shipping">Free</span>
+                    </div>
+
+                    <div class="final_total">
+                        <span>Total</span>
+                        <span id="checkout_total">0$</span>
+                    </div>
+
+                </div>
+
+
+                <a href="index.html" class="back_to_shop">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Continue Shopping
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+   
+    <script src="Checkout.js"></script>
+
+</body>
+
+</html>
