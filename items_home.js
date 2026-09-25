@@ -2,7 +2,7 @@
 
 // 1-هجيب اللى data من ملف json باستخدام الfetch("url")
 
-fetch('Ecommerce website/products.json')
+fetch('Ecommerce Website/products.json')
 
     .then(response => response.json())
 
